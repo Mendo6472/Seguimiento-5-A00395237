@@ -54,4 +54,27 @@ public class Bst {
         return names;
     }
 
+    public int getDepth(){
+        int depth = getDepth(root, 1);
+        return depth;
+    }
+    private int getDepth(Node current, int depth){
+        int rightDepth = 0;
+        int leftDepth = 0;
+        if(current.getRight() != null){
+           rightDepth = getDepth(current.getRight(), depth + 1);
+        }
+        if(current.getLeft() != null){
+            leftDepth = getDepth(current.getLeft(), depth + 1);
+        }
+        if(current.getLeft() == null && current.getRight() == null){
+            return depth;
+        }
+        if(rightDepth > leftDepth){
+            return rightDepth;
+        } else {
+            return leftDepth;
+        }
+    }
+
 }

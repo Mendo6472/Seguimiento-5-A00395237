@@ -12,6 +12,7 @@ public class Main{
         String names = getNames();
         controller.createBst(names);
         System.err.println(controller.inOrder());
+        System.out.println(controller.getDepth());
     }
 
     public static String getNames() {

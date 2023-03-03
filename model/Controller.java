@@ -66,5 +66,9 @@ public class Controller {
         return bst.inOrder();
     }
 
+    public int getDepth(){
+        return bst.getDepth();
+    }
+
     
 }
