@@ -39,4 +39,26 @@ public class Bst {
         }
     }
 
+    public Node getMin(){
+        return getMin(root);
+    }
+    private Node getMin(Node current){
+        if(current.getLeft() == null){
+            return current;
+        }
+        return getMin(current.getLeft());
+    }
+
+    public Node getMax(){
+        return getMax(root);
+    }
+    private Node getMax(Node current){
+        if(current.getRight() == null){
+            return current;
+        }
+        return getMax(current.getRight());
+    }
+
+
+
 }
