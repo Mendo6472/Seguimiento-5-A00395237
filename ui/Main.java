@@ -11,8 +11,8 @@ public class Main{
         sc = new Scanner(System.in);
         String names = getNames();
         controller.createBst(names);
-        System.err.println(controller.inOrder());
-        System.out.println(controller.getDepth());
+        System.out.println("Nombres en orden alrevez:" + controller.inOrder());
+        System.out.println("Profundidad del arbol: " + controller.getDepth());
     }
 
     public static String getNames() {
