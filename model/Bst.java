@@ -39,26 +39,17 @@ public class Bst {
         }
     }
 
-    public Node getMin(){
-        return getMin(root);
+    public void inOrder(){
+        inOrder(root);
     }
-    private Node getMin(Node current){
-        if(current.getLeft() == null){
-            return current;
+
+    private void inOrder(Node current){
+        if(current == null){
+            return;
         }
-        return getMin(current.getLeft());
+        inOrder(current.getRight());
+        System.out.println(current.getKey());
+        inOrder(current.getLeft());
     }
-
-    public Node getMax(){
-        return getMax(root);
-    }
-    private Node getMax(Node current){
-        if(current.getRight() == null){
-            return current;
-        }
-        return getMax(current.getRight());
-    }
-
-
 
 }
