@@ -8,31 +8,34 @@ public class Bst {
 
     }
 
-    public void add(Node node){
+    public String add(Node node){
         if(root == null){
             root = node;
+            return "Se ha añadido el elemento al arbol con exito";
         }else{
-            add(root, node);
+            return add(root, node);
         }
     }
-    private void add(Node current, Node node){
+    private String add(Node current, Node node){
         if(node.getKey().compareTo(current.getKey()) < 0){
           //Meter a la izquierda
             if(current.getLeft() == null){
                 current.setLeft(node);
+                return "Se ha añadido el elemento al arbol con exito";
             }else{
-                add(current.getLeft(), node);
+                return add(current.getLeft(), node);
             }
         }else if(node.getKey().compareTo(current.getKey()) > 0){
             //Meter a la derecha
             if(current.getRight() == null){
                 current.setRight(node);
+                return "Se ha añadido el elemento al arbol con exito";
             }else{
-                add(current.getRight(), node);
+                return add(current.getRight(), node);                
             }
 
         }else{
-            //No hacer nada
+            return "No se a añadido el elemento al arbol.";
         }
     }
 
