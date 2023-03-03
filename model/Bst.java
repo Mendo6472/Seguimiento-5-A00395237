@@ -39,17 +39,19 @@ public class Bst {
         }
     }
 
-    public void inOrder(){
-        inOrder(root);
+    public String inOrder(){
+        return inOrder(root);
     }
 
-    private void inOrder(Node current){
+    private String inOrder(Node current){
+        String names = "";
         if(current == null){
-            return;
+            return "";
         }
-        inOrder(current.getRight());
-        System.out.println(current.getKey());
-        inOrder(current.getLeft());
+        names += inOrder(current.getRight()) + " ";
+        names += current.getKey() + " ";
+        names += inOrder(current.getLeft()) + "";
+        return names;
     }
 
 }

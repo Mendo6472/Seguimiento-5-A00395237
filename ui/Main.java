@@ -9,14 +9,14 @@ public class Main{
     public static void main(String[] args) {
         controller = new Controller();
         sc = new Scanner(System.in);
-
-        String names = sc.nextLine();
+        String names = getNames();
         controller.createBst(names);
-        controller.inOrder();
+        System.err.println(controller.inOrder());
     }
 
     public static String getNames() {
-        String names = "";
+        System.out.println("Ingrese los nombres en una sola linea separados por espacios");
+        String names = sc.nextLine();
         return names;
     }
 

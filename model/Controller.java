@@ -1,4 +1,4 @@
-package model;
+package model;  
 
 public class Controller {
 
@@ -62,8 +62,8 @@ public class Controller {
         return array;
     }
 
-    public void inOrder(){
-        bst.inOrder();
+    public String inOrder(){
+        return bst.inOrder();
     }
 
     
